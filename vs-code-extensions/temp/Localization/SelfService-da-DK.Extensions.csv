@@ -1,0 +1,74 @@
+Component,Subcomponent,Element,Key,Text
+SELFSERVICE,CALENDAR,APPOINTMENTS,,Kommende Aftaler
+SELFSERVICE,CALENDAR,DATE,,Dato
+SELFSERVICE,CALENDAR,DETAIL,,Detaljer
+SELFSERVICE,CALENDAR,FROMTO,,(fra - til)
+SELFSERVICE,CALENDAR,GOTO,,Gå til mine aftaler
+SELFSERVICE,CALENDAR,INFO,,"Her på siden kan du se og oprette kommende aftaler. Hvis du er i tvivl eller har spørgsmål, kan du"
+SELFSERVICE,CALENDAR,LOCATION,,Sted
+SELFSERVICE,CALENDAR,TIME,,Tidspunkt
+SELFSERVICE,CITIZEN-SELECT,CONTINUE-AS-SELF,,Fortsæt som mig selv
+SELFSERVICE,CITIZEN-SELECT,HAS-ACCESS,,"Du har adgang til at se og agere på flere andres vegne, vælg venligst den borger/visning du vil fortsætte med."
+SELFSERVICE,CITIZEN-SELECT,INFO,,"Her på siden kan du vælge hvilken person/visning du har adgange til. Hvis du er i tvivl eller har spørgsmål, kan du"
+SELFSERVICE,CITIZEN-SELECT,NO-ACCESS,,Du har ikke adgang til en borger i borgerportalen
+SELFSERVICE,CITIZEN-SELECT,TITLE,,Vælg borger/visning
+SELFSERVICE,ECONOMY,ENTRIES,TITLE,Posteringer
+SELFSERVICE,ECONOMY,INFO,,"Her på siden kan du se et samlet overblik din konti. Hvis du er i tvivl eller har spørgsmål, kan du"
+SELFSERVICE,ECONOMY,TABLE,AMOUNT,Beløb
+SELFSERVICE,ECONOMY,TABLE,APPENDIX,Bilag
+SELFSERVICE,ECONOMY,TABLE,APPROVED,Godkendt
+SELFSERVICE,ECONOMY,TABLE,BALANCE,"Resterende beløb"
+SELFSERVICE,ECONOMY,TABLE,COMMENT,Bemærkning
+SELFSERVICE,ECONOMY,TABLE,CREATOR,Opretter
+SELFSERVICE,ECONOMY,TABLE,DATE,Dato
+SELFSERVICE,ECONOMY,TABLE,NO-APPENDIX,"Intet bilag"
+SELFSERVICE,ECONOMY,TABLE,SHOW-APPENDIX,"Vis bilag"
+SELFSERVICE,ECONOMY,TABLE,TYPE,Type
+SELFSERVICE,FOOTER,ADDRESS,,Rådhuspladsen 2
+SELFSERVICE,FOOTER,MUNICIPALITY,,Aarhus Kommune
+SELFSERVICE,FOOTER,PHONE,,Tlf.
+SELFSERVICE,FOOTER,PHONENUMBER,,89 40 20 00
+SELFSERVICE,FOOTER,TITLE,,Aarhus Kommune Rådhuset
+SELFSERVICE,FOOTER,ZIPCITY,,8000 Aarhus C
+SELFSERVICE,GOALS,HELPER-TEXT,,Har du spørgsmål til dine mål?
+SELFSERVICE,GOALS,HELPER-TEXT-DETAIL,,"Hvis du er i tvivl eller har spørgsmål til dine mål, kan du skrive til din sagsbehandler ved at "
+SELFSERVICE,GOALS,INFO,,"Her på siden kan du se et overblik over dine mål og delmål, samt udfylde evaluering af målene. Hvis du er i tvivl eller har spørgsmål, kan du"
+SELFSERVICE,GOALS,MAIN-GOAL,,Overordnet mål
+SELFSERVICE,GOALS,SUMMARY-SUB-GOAL,,Oversigt over delmål
+SELFSERVICE,GOALS,TARGET-SUB-GOAL,,Delmål for målet
+SELFSERVICE,INBOX,INFO,,"Her på siden kan du se dine videor samt se og besvare dine spørgeskema. Hvis du er i tvivl eller har spørgsmål, kan du"
+SELFSERVICE,INFO,CLICK-HERE,,"klikke her"
+SELFSERVICE,LOGIN,CITIZEN-ACCESS,,Din borger adgang
+SELFSERVICE,LOGIN,LOGIN-WITH,,Log på med
+SELFSERVICE,LOGIN,NEED-HELP,,Behov for hjælp til at logge ind?
+SELFSERVICE,NAVIGATION,CALENDAR,,Kalender
+SELFSERVICE,NAVIGATION,ECONOMY,,Økonomi
+SELFSERVICE,NAVIGATION,GOALS,,Mål
+SELFSERVICE,NAVIGATION,HOME,,Oversigt
+SELFSERVICE,NAVIGATION,INBOX,,Indbakke
+SELFSERVICE,NAVIGATION,JOURNAL,,Journal
+SELFSERVICE,OVERVIEW,INFO,,"Her på siden kan du danne dig et samlet overblik over dine sager, aftaler, beskeder og mål. Hvis du er i tvivl eller har spørgsmål, kan du"
+SELFSERVICE,PAGES,LOGOUT,,"Log ud"
+SELFSERVICE,PAGINATION,PAGINATION-SUMMARY,,"Viser {{from}} til {{to}} af {{total}}"
+SELFSERVICE,PROFILE,COMMITMENT-AND-AGREEMENT,AGREEMENT,Samtykker
+SELFSERVICE,PROFILE,COMMITMENT-AND-AGREEMENT,COMMITMENT,Personer og institutioner med tværgående tilsagn
+SELFSERVICE,PROFILE,COMMITMENT-AND-AGREEMENT,CREATED,Oprettet
+SELFSERVICE,PROFILE,COMMITMENT-AND-AGREEMENT,HAS-ACCESS,Har adgang til borgerportalen
+SELFSERVICE,PROFILE,COMMITMENT-AND-AGREEMENT,TITLE,Tværgående tilsagn / Samtykker
+SELFSERVICE,PROFILE,DETAIL,ADDRESS,Adresse
+SELFSERVICE,PROFILE,DETAIL,CONTACT-INFO,Kontaktinformation
+SELFSERVICE,PROFILE,DETAIL,DOB,Fødselsdato
+SELFSERVICE,PROFILE,DETAIL,FIELDS,Arbejdstelefon
+SELFSERVICE,PROFILE,DETAIL,MOBILE,Mobiltelefon
+SELFSERVICE,PROFILE,DETAIL,NAME,Navn
+SELFSERVICE,PROFILE,DETAIL,PHONE,Telefon
+SELFSERVICE,PROFILE,DETAIL,TITLE,Mine detaljer
+SELFSERVICE,PROFILE,INFO,,"Her på siden kan du se og rette dine personlige detaljer, samt detaljer for personer i ditnetværk - samt se fuldmagter og samtykker. Har du spørgsmål, kan du"
+SELFSERVICE,SOLUTION,NAME,,Din Borger Portal
+SELFSERVICE,TABLE,MESSAGE,NORESULTS,"Der er ingen resultater at vise."
+SELFSERVICE,TABLE,NEXT,TOOLTIP,"Næste side"
+SELFSERVICE,TABLE,PREV,TOOLTIP,"Forrige side"
+SELFSERVICE,VIEWING-AS,,,Du ser siden om
+SELFSERVICE,WIDGET,GOALS,GO-TO-DETAIL,Gå til mine mål
+SELFSERVICE,WIDGET,GOALS,TITLE,Mine mål
+SELFSERVICE,WIDGET,JOURNAL,TITLE,Mine journalnotater

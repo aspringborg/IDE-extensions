@@ -1,0 +1,103 @@
+<div class="container-fluid row">
+    <div class="col-6 form-section">
+      <modulus-input-text
+        [label]="'REGIMESKABELON.FORM.TITEL.LABEL' | translate"
+        [maxLength]="150"
+        [value]="(state$ | async)?.title"
+        [required]="true"
+        [readonly]="(state$ | async)?.isReadonly"
+        (valueChange)="stateUpdater({title: $event})">
+      </modulus-input-text>
+      {{"REGIMESKABELON.TEST.RANDOM.TEXT"}}
+      <modulus-input-textarea
+              [label]="'REGIMESKABELON.FORM.BESKRIVELSE.LABEL' | translate"
+              [value]="(state$ | async)?.beskrivelse"
+              [required]="true"
+              [maxLength]="10000"
+              [readonly]="(state$ | async)?.isReadonly"
+              (valueChange)="stateUpdater({beskrivelse: $event})">
+      </modulus-input-textarea>
+      <modulus-label [label]="'REGIMESKABELON.FORM.ANTALORDINATIONER.LABEL' | translate">{{antalOrdinationer$ | async}}
+      </modulus-label>
+      <p>{{'REGIMESKABELON.FORM.ORDINATIONSSKABELONER.TEXT' | translate}}</p>
+      <ng-container *ngFor="let skabelon of (skabelonOrdinationer$ |async); index as i; trackBy: trackByUiId">
+        <div>
+          <h6>{{ ('REGIMESKABELON.FORM.ORDINATIONSSKABELON.HEADER' | translate) + (i + 1) + (i == 0 ? ('REGIMESKABELON.FORM.ORDINATIONSSKABELON.HOVEDORDINATION' | translate) : '')}}</h6>
+          <modulus-input-text
+            [dictionary]="'REGIMESKABELON.ANDET.ANDRESKABELONER'"
+            [maxLength]="150"
+            [value]="skabelon.navn"
+            [readonly]="(state$ | async)?.isReadonly"
+            [required]="true"
+            (valueChange)="updateSkabelonOrdination(i, {navn: $event})">
+          </modulus-input-text>
+          <modulus-input-select
+            [readonly]="(state$ | async)?.isReadonly"
+            [required]="true"
+            [dictionary]="'REGIMESKABELON.FORM.DOSERINGSENHED'"
+            [value]="skabelon.doseringsenhed"
+            [collection]="enhedOptions$ | async"
+            (valueChange)="updateSkabelonOrdination(i, {doseringsenhed: $event})">
+          </modulus-input-select>
+        </div>
+      </ng-container>
+      {{"REGIMESKABELON.TEST.TEST1"}}
+      <div class="mt-3">
+        <modulus-input-button
+          [type]="'outline-primary btn-sm'"
+          [id]="'add-skabelonordination-button'"
+          [value]="'REGIMESKABELON.FORM.TILFOEJORDINATION.LABEL' | translate"
+          [alt]="'REGIMESKABELON.FORM.TILFOEJORDINATION.TOOLTIP' | translate"
+          (clickEvent)="tilfoejOrdination()">
+        </modulus-input-button>
+        <modulus-input-button
+          [type]="'outline-primary btn-sm'"
+          [id]="'remove-skabelonordination-button'"
+          [value]="'REGIMESKABELON.FORM.FJERNORDINATION.LABEL' | translate"
+          [alt]="'REGIMESKABELON.FORM.FJERNORDINATION.TOOLTIP' | translate"
+          (clickEvent)="fjernOrdination()"
+          [disabled]="(skabelonOrdinationer$ |async).length < 2">
+        </modulus-input-button>
+      </div>
+    </div>
+    <div class="vr col-6 form-section">
+      <div class="modulus-vejledning__single mb-3" *ngFor="let vejledning of (vejledninger$ | async); index as i; trackBy: trackByUiId">
+        <div class="text-right mb-2">
+          <modulus-input-button [type]="'outline-primary btn-sm'" [alt]="'MEDICINE.DOSAGE.FORM.DELETESTRUCTURED' | translate" (clickEvent)="fjernVejledning(i)" [disabled]="(state$ | async)?.isReadonly || (vejledninger$ | async).length < 2">
+            <i class="fa fa-trash-o"></i>
+          </modulus-input-button>
+        </div>
+        <modulus-input-text
+            [dictionary]="'REGIMESKABELON.FORM.VEJLEDNINGSTITEL'"
+            [maxLength]="150"
+            [value]="vejledning.titel"
+            [readonly]="(state$ | async)?.isReadonly"
+            (valueChange)="updateVejledning(i, {titel: $event})">
+        </modulus-input-text>
+        <modulus-vejledningslinje-form
+          [vejledningsLinjer]="vejledning.linjer"
+          [isReadonly]="(state$ | async)?.isReadonly"
+          (stateUpdated)="onVejledningslinjeUpdated(vejledning.uiId, $event)">
+        </modulus-vejledningslinje-form>
+        <h6>{{'REGIMESKABELON.FORM.VEJLEDNINGSBEMAERKNING.LABEL' | translate}}</h6>
+        <modulus-input-textarea
+          [labelWidth]="0"
+          [value]="vejledning.bemaerkning"
+          [maxLength]="10000"
+          [readonly]="(state$ | async)?.isReadonly"
+          (valueChange)="updateVejledning(i, {bemaerkning: $event})">
+        </modulus-input-textarea>
+      </div>
+      <div class="col-12 mt-3">
+        <modulus-input-button
+          [type]="'outline-primary btn-sm'"
+          [id]="'add-vejledning-button'"
+          [value]="'REGIMESKABELON.FORM.TIFOEJVEJLEDNING.LABEL' | translate"
+          [alt]="'REGIMESKABELON.FORM.TIFOEJVEJLEDNING.TOOLTIP' | translate"
+          (clickEvent)="tilfoejVejledning()">
+        </modulus-input-button>
+      </div>
+  
+    </div>
+  </div>
+  
